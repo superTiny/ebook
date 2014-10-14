@@ -1,6 +1,5 @@
 package com.miles.ebook.bookwidget;
 
-import android.R.integer;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -18,7 +17,7 @@ import android.widget.Scroller;
 
 public class PageWidget extends View {
 
-	private static final String TAG = "hmg";
+	private static final String TAG = "PageWidget";
 	private int mWidth = 480;
 	private int mHeight = 800;
 	private int mCornerX = 0; // ��ק���Ӧ��ҳ��
@@ -524,8 +523,6 @@ public class PageWidget extends View {
 
 	private void startAnimation(int delayMillis) {
 		int dx, dy;
-		// dx ˮƽ���򻬶��ľ��룬��ֵ��ʹ�����������
-		// dy ��ֱ���򻬶��ľ��룬��ֵ��ʹ�������Ϲ���
 		if (mCornerX > 0) {
 			dx = -(int) (mWidth + mTouch.x);
 		} else {

@@ -120,12 +120,10 @@ public class BookPageFactory {
 		return buf;
 	}
 
-	// ��ȡ��һ����
 	protected byte[] readParagraphForward(int nFromPos) {
 		int nStart = nFromPos;
 		int i = nStart;
 		byte b0, b1;
-		// ��ݱ����ʽ�жϻ���
 		if (CHAR_FORMAT.equals("UTF-16LE")) {
 			while (i < mBookLength - 1) {
 				b0 = mFileMapper.get(i++);
@@ -268,7 +266,6 @@ public class BookPageFactory {
 		mNowPageBookVector = pageDown();
 	}
 
-	/**����һҳͼ��*/
 	public void onDraw(Canvas c) {
 		if (mNowPageBookVector.size() == 0)
 			mNowPageBookVector = pageDown();
